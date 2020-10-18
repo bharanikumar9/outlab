@@ -1,0 +1,45 @@
+
+	<br><br>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    
+        <label>
+             Name:
+             <br>
+            <input type="text" formControlName="name">
+          </label> <br><br>
+        <label>
+             Email:<br>
+            <input type="text" formControlName="email">
+          </label> <br><br>
+          <label>
+            Feedback:
+         </label> 
+    
+      <div>
+            <input id="Great" type="radio"  value="Great" name="feedback" formControlName="feedback">
+          <label for="Great">Great</label>
+        </div>
+    
+        <div>
+          <input id="Okay" type="radio" value="Okay" name="feedback" formControlName="feedback">
+          <label for="Okay">Okay</label>
+        </div>
+        <div>
+            <input id="Not Good" type="radio" value="Not Good" name="feedback" formControlName="feedback">
+            <label for="Not Good">Not Good</label>
+          </div><br><br>
+    
+          <label>
+            Comments:<br>
+           <input type="text" formControlName="comment">
+         </label> <br><br>
+    
+      <button type="submit">Submit</button>
+     
+    </form><!-- Form ends -->
+    
+    <span class="left">name:</span> <div class="rigt">{{data.name}}</div><br>
+      <span class="left">email:</span> <div class="rigt">{{data.email}}</div><br>
+     <span class="left">Feedback:</span> <div class="rigt">{{data.feedback}}</div><br>
+     <span class="left">comments:</span> <div class="rigt">{{data.comment}}</div><br>
+    
